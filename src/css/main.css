@@ -110,7 +110,6 @@ footer > .container{
 }
 .form_cont{
     min-width: 100%;
-    background-color: #018BD4;
     flex: 1;
     display: flex;
     flex-direction: column;
