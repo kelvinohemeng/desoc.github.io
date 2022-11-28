@@ -214,7 +214,6 @@ textarea::placeholder{
     }
     footer > .container{
         max-width: 100%;
-        background-color: #018BD4;
         justify-content: space-around;
         align-items: center;
     }
