@@ -40,6 +40,8 @@ p{
 }
 
 .deactivate-scroll{
+    inset: 0;
+    width: 100%;
     position: fixed;
 
 }
@@ -239,6 +241,192 @@ a{
 
     }
     
+}
+
+/* signup */
+@media screen and (min-width:320px) {
+    #sign_up{
+        /* pointer-events: none; */
+        position: fixed;
+        z-index: 999999999 !important;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.524);
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .b-signup{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        /* background-color: #018BD4; */
+    }
+    .sign_container{
+        padding: 0 !important;
+        max-width: 1000px;
+        height: 670px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    .sign-up-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 60px;
+        align-self: center;
+        text-align: center;
+    }
+    .sign-up-cont > div > h2 {
+        font-size: var(----x-large);
+        color: var(------blue);
+    }
+    .sign-up-cont > div > p {
+        font-size: var(----x-small);
+    }
+    .sign-up-cont > form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sign-up-cont > form > input{
+        border-radius: 5px;
+        padding: 15px 10px;
+        transition: all ease-out 300ms;
+    }
+    .sign-up-cont > form > input:hover{
+        transform:translate(20px, -5px);
+        filter: drop-shadow(-10px 10px 0px var(------winish)) /*invert(75%)-*/;
+    }
+    .sign-up-cont > form > button{
+        font-size: var(----small);
+        display: block;
+        background-color: var(------yellow);
+        border: solid 2px black;
+        transition: 300ms ease-out;
+        border-radius: 5px;
+    }
+    .sign-up-cont > form > input::placeholder{
+        font-size: var(----small);
+    }
+    .guest{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .guest > button{
+        margin: 0 auto;
+        padding: 10px 40px;
+        border-radius: 5px;
+        background-color: white;
+        transition: all ease-out 300ms;
+    }
+    .guest > button:hover{
+        transform: scale(1.05)translate(20px, -5px);
+        filter: drop-shadow(-10px 10px 0px var(------winish)) /*invert(75%)-*/;
+    }
+    .guest > p > a{
+        color: var(------winish);
+        border-bottom: 0.5px solid #E20789;
+    }
+    .signup-image{
+        display: none;
+    }
+}
+@media screen and (min-width:900px) {
+    #sign_up{
+        position: fixed;
+        z-index: 999999999 !important;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.524);
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    .sign_container{
+        padding: 0 !important;
+        max-width: 5a00px;
+        height: 670px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    .sign-up-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 40px;
+        align-self: center;
+        text-align: center;
+    }
+    .sign-up-cont > div > h2 {
+        font-size: var(----x-large);
+        color: var(------blue);
+    }
+    .sign-up-cont > div > p {
+        font-size: var(----x-small);
+    }
+    .sign-up-cont > form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sign-up-cont > form > input{
+        border-radius: 5px;
+        padding: 15px 10px;
+        transition: all ease-out 300ms;
+    }
+    .sign-up-cont > form > input:hover{
+        transform:translate(20px, -5px);
+        filter: drop-shadow(-10px 10px 0px var(------winish)) /*invert(75%)-*/;
+    }
+    .sign-up-cont > form > button{
+        font-size: var(----small);
+        display: block;
+        background-color: var(------yellow);
+        border: solid 2px black;
+        transition: 300ms ease-out;
+        border-radius: 5px;
+    }
+    .sign-up-cont > form > input::placeholder{
+        font-size: var(----small);
+    }
+    .guest{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .guest > button{
+        margin: 0 auto;
+        padding: 10px 40px;
+        border-radius: 5px;
+        background-color: white;
+        transition: all ease-out 300ms;
+    }
+    .guest > button:hover{
+        transform: scale(1.05)translate(20px, -5px);
+        filter: drop-shadow(-10px 10px 0px var(------winish)) /*invert(75%)-*/;
+    }
+    .guest > p > a{
+        color: var(------winish);
+        border-bottom: 0.5px solid #E20789;
+    }
+    .signup-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("/src/assets/images/sign-up-image.jpg");
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 /* mobile-view */
@@ -486,20 +674,23 @@ header Section
 ----------*/
 @media screen and (min-width:320px) {
     nav{
-        backdrop-filter: blur(10px);
-        background-color: rgb(255, 255, 255);
         z-index: 99999999;
-        position: fixed;
         top: 0;
+        position: fixed;
         width: 100%;
-        filter: drop-shadow(0px 10px 30px var(------winish)) /*invert(75%)-*/;
-
+        padding:  10px 0;
+        /* filter: drop-shadow(0px 10px 10px white); */
+        
         /* pointer-events: none; */
     }
     .nav-container{
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.427);
         display: flex;
         padding: 10px !important;
         justify-content: space-between;
+        align-items: center;
+        border-radius: 100px;
         /* width: 100%; */
     }
     /* hamburger */

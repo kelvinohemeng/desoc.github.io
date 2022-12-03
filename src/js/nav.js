@@ -2,8 +2,25 @@ const navOpen = document.getElementById("nav_open")
 const navCloseContainer = document.getElementById("nav_close")
 const navLinks = document.querySelectorAll(".nav-links")
 const navCloseIcon = document.getElementById("close_nav")
+const signUp = document.querySelector(".sign-up")
+const signUpInner = document.querySelector(".sign-up-cont")
 
-console.log(navLinks)
+document.querySelector(".cta_nav").addEventListener('click', (e)=>{
+    signUp.style.display = "flex"
+    document.body.classList.add('deactivate-scroll')
+    e.stopPropagation()
+    // signUp.classList.add("open-signup")
+})
+document.querySelector(".b-signup").addEventListener('click', (e)=>{
+    signUp.style.display = "none"
+    document.body.classList.remove('deactivate-scroll')
+})
+
+signUpInner.addEventListener('click', (e)=>{
+    signUp.style.display = "flex"
+    e.stopPropagation()
+    
+})
 
 navOpen.addEventListener('click', ()=>{
     document.body.classList.add('deactivate-scroll')
