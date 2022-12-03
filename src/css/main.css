@@ -380,9 +380,13 @@ a{
         gap: 10px;
     }
     .sign-up-cont > form > input{
+        border: 1px solid black;
         border-radius: 5px;
         padding: 15px 10px;
         transition: all ease-out 300ms;
+    }
+    .sign-up-cont > form > input:active{
+        border: none;
     }
     .sign-up-cont > form > input:hover{
         transform:translate(20px, -5px);
@@ -1199,6 +1203,7 @@ about section
         display: flex;
         padding: 90px  0;
         margin: 50px 0;
+        cursor: grab;
         /* overflow: hidden; */
         /* background-color: #018BD4; */
     }
