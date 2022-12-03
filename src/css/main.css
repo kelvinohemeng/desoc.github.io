@@ -27,6 +27,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -39,11 +40,10 @@ p{
 }
 
 .deactivate-scroll{
-    height: 100vh;
-    overflow: hidden;
+    position: fixed;
+
 }
 .container {
-    /* width: 100%; */
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
