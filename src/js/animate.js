@@ -18,7 +18,6 @@ tl1.from('.the_image1', {
     duration:1,
     ease: Expo.easeOut,
     transformOrigin: 'top center',
-    skewType: "simple",
     skewX: -10,
 })
 const tl2 = gsap.timeline({paused: true,})
@@ -30,7 +29,6 @@ tl2.from('.the_image2', {
     duration:1,
     ease: Expo.easeOut,
     transformOrigin: 'top center',
-    skewType: "simple",
     skewX: -10,
 })
 const tl3 = gsap.timeline({paused: true,})
@@ -42,7 +40,6 @@ tl3.from('.the_image3', {
     duration:1,
     ease: Expo.easeOut,
     transformOrigin: 'top center',
-    skewType: "simple",
     skewX: -10,
 })
 const tl4 = gsap.timeline({paused: true,})
@@ -54,7 +51,6 @@ tl4.from('.the_image4', {
     duration:1,
     ease: Expo.easeOut,
     transformOrigin: 'top center',
-    skewType: "simple",
     skewX: -10,
 })
 
