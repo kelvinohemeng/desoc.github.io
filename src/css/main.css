@@ -267,8 +267,8 @@ a{
     }
     .sign_container{
         padding: 0 !important;
-        max-width: 1000px;
-        height: 670px;
+        max-width: 500px;
+        height: 600px;
         background-color: white;
         display: grid;
         grid-template-columns: 1fr;
@@ -279,7 +279,7 @@ a{
         display: flex;
         flex-direction: column;
         gap: 50px;
-        padding: 60px;
+        padding: 30px;
         align-self: center;
         text-align: center;
     }
@@ -351,7 +351,7 @@ a{
     }
     .sign_container{
         padding: 0 !important;
-        max-width: 5a00px;
+        max-width: 1000px;
         height: 670px;
         background-color: white;
         display: grid;
