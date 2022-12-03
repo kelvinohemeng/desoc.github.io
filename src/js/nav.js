@@ -20,6 +20,4 @@ for (let i = 0; i < navLinks.length; i++) {
         document.body.classList.remove('deactivate-scroll')
         navCloseContainer.style.display = 'none'
     })
-
-    
 }

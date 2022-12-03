@@ -188,9 +188,11 @@ a{
         gap: 120px;
     }
     .close_span1{
+        transform: rotate(0deg) !important;
         transition: all 300ms ease-out;
     }
     .close_span2{
+        transform: rotate(0deg) !important;
         transition: all 300ms ease-out;
     }
 
