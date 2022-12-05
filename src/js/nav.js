@@ -3,7 +3,7 @@ const navCloseContainer = document.getElementById("nav_close")
 const navLinks = document.querySelectorAll(".nav-links")
 const navCloseIcon = document.getElementById("close_nav")
 const signUp = document.querySelector(".sign-up")
-const signUpInner = document.querySelector(".sign-up-cont")
+const signUpInner = document.querySelector(".sign_container")
 
 document.querySelector(".cta_nav").addEventListener('click', (e)=>{
     signUp.style.display = "flex"
