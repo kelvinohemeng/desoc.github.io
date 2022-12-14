@@ -363,7 +363,7 @@ a{
     .sign_container{
         padding: 0 !important;
         max-width: 1000px;
-        height: 670px;
+        max-width: 870px;
         background-color: white;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -691,7 +691,7 @@ header Section
     nav{
         z-index: 99999999;
         top: 0;
-        position: absolute;
+        position: fixed;
         width: 100%;
         padding:  10px 0;
         /* filter: drop-shadow(0px 10px 10px white); */
@@ -870,6 +870,11 @@ Hero Section
         /* background-color: #018BD4; */
         padding: 250px 0;
     }
+    .hero_cta{
+        background: linear-gradient(266.47deg, #E20789 1.15%, #FFF004 96.88%);
+        border: none;
+        color: white;
+    }
     .hero_center > p{
         max-width: 400px;
         text-align: center;
@@ -960,7 +965,6 @@ Hero Section
         font-family: Helvetica, sans-serif !important;
         padding-bottom: 10px;
         font-size: 2.5rem;
-        border-bottom: solid 3px white;
     }
     .bars_ > p{
         padding-top: 30px;
@@ -1019,9 +1023,16 @@ about section
     font-size: 4.5rem;
     font-weight: 400;
 }
+.a_headline > h1{
+    transform: translateY(-20px);
+}
+.a_headline > h2{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
 .a_headline > h2 > span{
-
-    font-family: Yellowtail, sans-serif;
+    padding-top: 10px;
     color: var(------yellow);
 }
 .a_headline > h1 > span{
@@ -1331,31 +1342,7 @@ Programmes section
     }
     
 
-    /* cards display */
-    .card_cta{
-        margin-top: 10px;
-        gap: 10px;
-        padding: 10px 8px;
-        font-weight: 500;
-        font-size: var(----x-small);
-        align-items: center;
-        display: flex;
-        background-color: transparent;
-        border: solid 1px black;
-        border-radius: 3px;
-        transition: 300ms ease-in;
-    }
-    .card_cta > img{
-        width: 10px;
-    }
-    .progs_cards{
-        padding: 150px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background-color: #018BD4; */
-    }
-
+    
     .progs_cards_inner > h3{
         font-family: 'Inter', sans-serif;
         font-size: 1.8rem;
@@ -1375,48 +1362,93 @@ Programmes section
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        /* background-color: #2B0835; */
     }
     .card{
+        overflow: hidden;
+        position: relative;
         padding: 24px;
         align-items: flex-end;
         border-radius: 15px;
         border: solid 2px black;
         display: flex;
-        min-width: 20rem;
+        flex: 1 1 33%;
+        max-width: 100%;
         min-height: 32.5rem;
         transition: 300ms ease-in;
     }
-    .card:hover{
-        transform: translateY(-30px);
-    }
+
     .card > div > p{
         font-weight: 500;
     }
     .card:nth-child(1){
-        background-color: var(------yellow);
+        background: url("/src/assets/images/img1.jpg");
+        background-position: center;
+        background-size: cover;
     }
     .card:nth-child(1):hover{
-        filter: drop-shadow(-10px 10px 20px var(------winish)) /*invert(75%)-*/;
+        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
     }
     .card:nth-child(2){
-        background-color: var(------blue);
+        background: url("/src/assets/images/img2.jpg");
+        background-position: center;
+        background-size: cover;
     }
     .card:nth-child(2):hover{
-        filter: drop-shadow(-10px 10px 20px var(------purple)) /*invert(75%)-*/;
+        filter: drop-shadow(-20px 20px 0 var(------blue));
     }
     .card:nth-child(3){
-        background-color: var(------purple);
+        background: url("/src/assets/images/img3.jpg");
+        background-position: center;
+        background-size: cover;
     }
     .card:nth-child(3):hover{
-        filter: drop-shadow(-10px 10px 20px var(------yellow)) /*invert(75%)-*/;
+        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
     }
     .card:nth-child(4){
-        background-color: var(------winish);
+        background: url("/src/assets/images/sign-up-image.jpg");
+        background-position: center;
+        background-size: cover;
     }
     .card:nth-child(4):hover{
-        filter: drop-shadow(-10px 10px 20px var(------blue)) /*invert(75%)-*/;
+        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
     } 
+    /* cards display */
+    .card_cta{
+        margin-top: 10px;
+        margin-right: auto;
+        gap: 10px;
+        padding: 10px 8px;
+        font-weight: 500;
+        font-size: var(----x-small);
+        align-items: center;
+        display: flex;
+        background-color: transparent;
+        border: solid 1px white;
+        color: white;
+        border-radius: 3px;
+        transition: 300ms ease-in;
+    }
+    .card_cta:hover{
+        background-color: var(------blue);
+    }
+    .progs_cards{
+        padding: 150px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #018BD4; */
+    }
+    .card-inner{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        inset: 0;
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(0.47deg, #000000c2 1.15%, #ffffff00 96.88%);
+        color: white !important;
+    }
 }
 /* Desktop view */
 @media only screen and (min-width: 900px) {
@@ -1434,35 +1466,8 @@ Programmes section
         min-height: 32.5rem;
         transition: 300ms ease-in;
     }
-    .card:hover{
-        transform: translateY(-30px);
-    }
     .card > div > p{
         font-weight: 500;
-    }
-    .card:nth-child(1){
-        background-color: var(------yellow);
-    }
-    .card:nth-child(1):hover{
-        filter: drop-shadow(-10px 10px 20px var(------winish)) /*invert(75%)-*/;
-    }
-    .card:nth-child(2){
-        background-color: var(------blue);
-    }
-    .card:nth-child(2):hover{
-        filter: drop-shadow(-10px 10px 20px var(------purple)) /*invert(75%)-*/;
-    }
-    .card:nth-child(3){
-        background-color: var(------purple);
-    }
-    .card:nth-child(3):hover{
-        filter: drop-shadow(-10px 10px 20px var(------yellow)) /*invert(75%)-*/;
-    }
-    .card:nth-child(4){
-        background-color: var(------winish);
-    }
-    .card:nth-child(4):hover{
-        filter: drop-shadow(-10px 10px 20px var(------blue)) /*invert(75%)-*/;
     }
 }
 
@@ -1776,31 +1781,31 @@ Ceative section
         filter: drop-shadow(0px 0px 100px var(------yellow)) /*invert(75%)-*/;
     }
 
-    .the_image1{
+    .the_image{
         transform-origin: center !important;
         position: absolute;
         width: 300px;
         height: 400px;
-        /* background-color: #FFF004; */
-        background: url(/src/assets/images/img1.jpg);
+        background-color: #FFF004;
+        /* background: url('/src/assets/images/img1.jpg'); */
         background-size: cover;
         background-position: center;
         border-radius: 13.1796px;
         filter: drop-shadow(0px 0px 100px var(------yellow)) /*invert(75%)-*/;
     /* border: solid 2px white;         */
     }
-    .the_image2{
+    /* .the_image2{
         transform-origin: center !important;
         position: absolute;
         width: 300px;
         height: 400px;
-        /* background-color: #FFF004; */
+        background-color: #FFF004;
         background: url(/src/assets/images/img2.jpg);
         background-size: cover;
         background-position: center;
         border-radius: 13.1796px;
-        filter: drop-shadow(0px 0px 100px var(------blue)) /*invert(75%)-*/;
-        /* border: solid 2px white; */
+        filter: drop-shadow(0px 0px 100px var(------blue));
+        border: solid 2px white;
     }
     .the_image3{
         transform-origin: center !important;
@@ -1811,8 +1816,8 @@ Ceative section
         background-size: cover;
         background-position: center;
         border-radius: 13.1796px;
-        filter: drop-shadow(0px 0px 100px var(------winish)) /*invert(75%)-*/;
-        /* border: solid 2px white; */
+        filter: drop-shadow(0px 0px 100px var(------winish));
+        border: solid 2px white;
     }
     .the_image4{
         transform-origin: center !important;
@@ -1823,9 +1828,9 @@ Ceative section
         background-size: cover;
         background-position: center;
         border-radius: 13.1796px;
-        filter: drop-shadow(0px 0px 100px var(------yellow)) /*invert(75%)-*/;
-        /* border: solid 2px white; */
-    }
+        filter: drop-shadow(0px 0px 100px var(------yellow));
+        border: solid 2px white;
+    } */
     /* .display_image > div{
         background-color: #FFF004;
 
