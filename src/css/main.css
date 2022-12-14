@@ -1369,7 +1369,7 @@ Programmes section
         padding: 24px;
         align-items: flex-end;
         border-radius: 15px;
-        border: solid 2px black;
+        /* border: solid 2px var(------winish); */
         display: flex;
         flex: 1 1 33%;
         max-width: 100%;
@@ -1460,7 +1460,6 @@ Programmes section
         padding: 24px;
         align-items: flex-end;
         border-radius: 15px;
-        border: solid 2px black;
         display: flex;
         min-width: 20rem;
         min-height: 32.5rem;

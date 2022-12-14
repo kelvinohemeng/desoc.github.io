@@ -14,7 +14,6 @@ animationLoop.forEach((element) => {
     element.addEventListener('mouseleave', ()=>{
         tl1.reverse()
     })
-    console.log(element.dataset.image)
 })
 
 // timeline animation
