@@ -870,11 +870,11 @@ Hero Section
         /* background-color: #018BD4; */
         padding: 250px 0;
     }
-    .hero_cta{
+    /* .hero_cta{
         background: linear-gradient(266.47deg, #E20789 1.15%, #FFF004 96.88%);
         border: none;
         color: white;
-    }
+    } */
     .hero_center > p{
         max-width: 400px;
         text-align: center;
@@ -1385,33 +1385,26 @@ Programmes section
         background-position: center;
         background-size: cover;
     }
-    .card:nth-child(1):hover{
-        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
+    .card:hover{
+        transform: translateX(-20px)translateY(-20px);
+        filter: drop-shadow(10px 10px 0 var(------blue) ) ;
     }
     .card:nth-child(2){
         background: url("/src/assets/images/img2.jpg");
         background-position: center;
         background-size: cover;
     }
-    .card:nth-child(2):hover{
-        filter: drop-shadow(-20px 20px 0 var(------blue));
-    }
     .card:nth-child(3){
         background: url("/src/assets/images/img3.jpg");
         background-position: center;
         background-size: cover;
-    }
-    .card:nth-child(3):hover{
-        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
     }
     .card:nth-child(4){
         background: url("/src/assets/images/sign-up-image.jpg");
         background-position: center;
         background-size: cover;
     }
-    .card:nth-child(4):hover{
-        filter: drop-shadow(-20px 20px 0 var(------blue)) ;
-    } 
+
     /* cards display */
     .card_cta{
         margin-top: 10px;
