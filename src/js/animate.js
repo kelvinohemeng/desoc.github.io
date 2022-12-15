@@ -112,8 +112,8 @@ let eye = document.querySelectorAll('.eye')
 let eyeSpace = document.querySelector('.eyespace')
 
 window.onmousemove = () => {
-    let x = event.clientX * 5 / window.innerHeight + "%";
-    let y = event.clientY * 5 / window.innerHeight + "%";
+    let x = event.clientX * 0 / window.innerHeight + "px";
+    let y = event.clientY * 5 / window.innerHeight + "px";
 
     eye.forEach(eyeball => {
         eyeball.style.left = x

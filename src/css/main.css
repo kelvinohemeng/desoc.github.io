@@ -727,15 +727,16 @@ header Section
         gap: 10px;
         flex-direction: column;
         transition: 100ms ease-in;
+        background-color: var(------yellow);
     }
     .hamburger:hover{
         transform: rotate(-30deg);
-        background-color: var(------yellow);
     }
     .lash_{
         width: 25px;
         height: 2px;
         background-color: black;
+        background-color: var(------yellow);
     }
     /* cta of nav */
     .cta_nav{
@@ -750,6 +751,7 @@ header Section
         border-radius: 50px;
         width: 80px;
         height: 35px;
+        background-color: #FFF004;
     }
     .cta_nav_inner > span {
         font-family: var(----small);
@@ -764,9 +766,6 @@ header Section
         transition: 300ms ease-in-out;
     }
     
-    .cta_nav:hover{
-        background-color: var(------yellow);
-    }
     .cta_nav:hover .cta_nav_inner{
         transform: translateY(-20px);
     }
@@ -888,6 +887,20 @@ Hero Section
         border: none;
         color: white;
     } */
+    .hero_cta{
+        position: relative;
+        border: solid 2px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 5px 15px;
+        border-radius: 50px;
+        width: 80px;
+        height: 35px;
+        background-color: white;
+    }
     .hero_center > p{
         max-width: 400px;
         text-align: center;
