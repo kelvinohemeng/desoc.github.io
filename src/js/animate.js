@@ -80,4 +80,18 @@ tl1.from('.the_image', {
 // function li(a, b, n) {
 //   return (1 - n) * a + n * b;
 // }
-
+const we = document.querySelectorAll(".we")
+gsap.from(we , {
+    y: 50,
+    opacity: 0,
+    stagger: .4,
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".we",
+        // pin: true,   // pin the trigger element while active
+        markers: true,
+        // start: "top top", // when the top of the trigger hits the top of the viewport
+        // end: "+=500", // end after scrolling 500px beyond the start
+        // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      }
+});

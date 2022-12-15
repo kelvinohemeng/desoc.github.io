@@ -893,6 +893,7 @@ Hero Section
         text-align: center;
         font-size: 5.5rem;
         font-weight: 400;
+        overflow: hidden;
     }
     .hero_bars{
         margin-bottom: 30px;
@@ -933,20 +934,32 @@ Hero Section
     .hero-bounce{
         position: absolute;
         top: 0;
-        right: 0;
+        right: -50vw !important;
         z-index: -5;
-        transform: rotate(10deg)translateX(300px)scale(1);
+        animation: bounceAnim 2s ease-out infinite alternate;
+    }
+    
+    @keyframes bounceAnim {
+        from{
+            transform: translateY(-10px);
+        }
+        to{
+            transform: translateY(20px);
+        }
     }
 }
-
-@media only screen and (min-width: 900px) {
+/* 
+@media only screen and (min-width: 565px) {
     .hero-bounce{
         position: absolute;
         top: 0;
-        right: 0;
+        right: -40vw !important;
         z-index: -5;
-        transform: rotate(10deg)translateX(30px)scale(1.2);
+        animation: bounceAnim 2s ease-out infinite alternate;
     }
+    
+} */
+@media only screen and (min-width: 900px) {
     #hero{
         display: flex;
         flex-direction: column;
@@ -962,6 +975,8 @@ Hero Section
         letter-spacing: -8px;
         font-size: 9rem;
         font-weight: 400;
+        display: flex;
+        gap: 20px;
     }
     .hero_bars{
         margin-bottom: 30px;
@@ -1395,7 +1410,7 @@ Programmes section
     }
 
     .card:hover{
-        transform: scale(0.95)translateX(-20px)translateY(-20px);
+        /* transform: scale(0.95)translateX(-20px)translateY(-20px); */
         box-shadow: inset 10px 10px 30px var(------purple-darker);
     }
 
