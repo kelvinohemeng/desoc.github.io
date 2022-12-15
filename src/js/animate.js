@@ -121,3 +121,12 @@ window.onmousemove = () => {
         eyeball.style.transform = "translate("+x+","+y+")"
     });
 }
+
+let anticipateEl = document.querySelectorAll('.anticipate')
+
+let tl = gsap.timeline({repeat:-1})
+
+tl
+.from(anticipateEl,{y:-250, stagger:0.09, duration:1.5,ease: "expo.out",})
+.to(anticipateEl,{y:250, stagger: -0.09, duration:1.5,ease: "expo.in",})
+
