@@ -89,9 +89,35 @@ gsap.from(we , {
     scrollTrigger: {
         trigger: ".we",
         // pin: true,   // pin the trigger element while active
-        markers: true,
+        // markers: true,
         // start: "top top", // when the top of the trigger hits the top of the viewport
         // end: "+=500", // end after scrolling 500px beyond the start
         // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       }
 });
+
+
+// document.querySelector('body').addEventListener('mousemove', eyeball);
+// function eyeball() {
+//     let eye = document.querySelectorAll('.eye')
+//     eye.forEach((eye) => {
+    //         let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 0.5);
+    //         let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 0.5);
+    //         let radian = Math.atan2(event.pageX - x, event.pageY - y);    
+//         let rot = (radian * (8 / Math.PI) * -8) + 0;
+//         eye.style.transform = "rotate("+ rot + "deg)";
+//     })
+// }
+let eye = document.querySelectorAll('.eye')
+let eyeSpace = document.querySelector('.eyespace')
+
+window.onmousemove = () => {
+    let x = event.clientX * 5 / window.innerHeight + "%";
+    let y = event.clientY * 5 / window.innerHeight + "%";
+
+    eye.forEach(eyeball => {
+        eyeball.style.left = x
+        eyeball.style.top = y
+        eyeball.style.transform = "translate("+x+","+y+")"
+    });
+}

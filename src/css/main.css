@@ -21,7 +21,10 @@
     ----x-large: 4.8rem;
 }
 
-
+.eye{
+    position: absolute;
+    /* transform: translateX(20px); */
+}
 
 
 html{
@@ -768,6 +771,10 @@ header Section
         transform: translateY(-20px);
     }
     
+    .eyes{
+        display: none;
+        margin: 0 auto;
+    }
 
 }
 
@@ -785,7 +792,9 @@ header Section
         width: 100%;
     }
     .eyes{
+        display: block;
         margin: 0 auto;
+        transform-origin: center;
     }
     /* hamburger */
     
@@ -893,7 +902,6 @@ Hero Section
         text-align: center;
         font-size: 5.5rem;
         font-weight: 400;
-        overflow: hidden;
     }
     .hero_bars{
         margin-bottom: 30px;
@@ -960,6 +968,14 @@ Hero Section
     
 } */
 @media only screen and (min-width: 900px) {
+    .hero-bounce{
+        position: absolute;
+        top: 0;
+        right: -0vw !important;
+        z-index: -5;
+        animation: bounceAnim 2s ease-out infinite alternate;
+    }
+    
     #hero{
         display: flex;
         flex-direction: column;
