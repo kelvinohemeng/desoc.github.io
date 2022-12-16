@@ -1561,8 +1561,10 @@ Ceative section
         transform: translateX(-200px);
         transform: rotate(-35deg);
         border-radius: 20px;
+        animation: bounceAnim 2s infinite alternate ease-in;
     }   
     .icon_down{
+        animation: bounceAnim 2s infinite alternate ease-in;
         position: absolute;
         bottom: 120px;
         right: 50px;
