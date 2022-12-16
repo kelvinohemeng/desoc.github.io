@@ -971,6 +971,7 @@ Hero Section
         background-color: var(------purple-dark);
     }
     .three_{
+        position: relative;
         border-radius: 0 0 40px 40px;
         background-color: var(------purple);
     }
@@ -981,12 +982,27 @@ Hero Section
         z-index: -5;
         animation: bounceAnim 2s ease-out infinite alternate;
     }
+    .hero-bounce-other{
+        position: absolute;
+        top: 0;
+        z-index: -5;
+        left: 0;
+        transform: translateY(450px)translateX(0px)scale(0.8);
+        filter: drop-shadow( 10px 10px 30px rgba(0, 0, 0, 0.76));
+    }
+    .hero-bounce-other2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: scale(0.8)rotate(-35deg);
+        filter: drop-shadow( 10px 10px 30px rgba(0, 0, 0, 0.76));
+    }
     
     @keyframes bounceAnim {
-        from{
+        0%{
             transform: translateY(-10px);
         }
-        to{
+        100%{
             transform: translateY(20px);
         }
     }
@@ -1003,6 +1019,18 @@ Hero Section
     
 } */
 @media only screen and (min-width: 900px) {
+    .hero-bounce-other{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50px) scale(0.8) !important;
+    }
+    .hero-bounce-other2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-20px)translateX(250px)scale(0.8)rotate(-35deg);
+    }
     .hero-bounce{
         position: absolute;
         top: 0;
@@ -1035,6 +1063,7 @@ Hero Section
         flex-direction: row;
     }
     .bars_{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1055,6 +1084,7 @@ Hero Section
         font-weight: 300;
     }
     .one_{
+        position: relative;
         border-radius: 40px 0px 0px 40px;
     }
     .two_{

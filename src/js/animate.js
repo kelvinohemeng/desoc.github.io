@@ -130,3 +130,27 @@ tl
 .from(anticipateEl,{y:-250, stagger:0.09, duration:1.5,ease: "expo.out",})
 .to(anticipateEl,{y:250, stagger: -0.09, duration:1.5,ease: "expo.in",})
 
+gsap.from(".hero-bounce-other" , {
+    y: 0,
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".hero-bounce-other",
+        // pin: true,   // pin the trigger element while active
+        // markers: true,
+        // start: "top top", // when the top of the trigger hits the top of the viewport
+        // end: "+=500", // end after scrolling 500px beyond the start
+        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      }
+});
+gsap.from(".hero-bounce-other2" , {
+    y: -50,
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".hero-bounce-other2",
+        // pin: true,   // pin the trigger element while active
+        // markers: true,
+        // start: "top top", // when the top of the trigger hits the top of the viewport
+        // end: "+=500", // end after scrolling 500px beyond the start
+        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      }
+});
