@@ -70,6 +70,34 @@ a{
     color: black;
 }
 
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+@media (min-width: 576px) {
+    .container { 
+        width: 540px;
+    }
+}
+@media (min-width: 900px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
 @media (min-width: 320px) {
     .nav-open{
         z-index: 99999999999;
@@ -167,7 +195,7 @@ a{
     }
     .nav-open > .container{
         display: flex;
-        padding: 0 100px;
+        padding: 0 0px;
         flex-direction: row!important;
     }
     .links{
@@ -1014,13 +1042,6 @@ Hero Section
         animation: bounceAnim 2s ease-out infinite alternate;
     }
     
-    #hero{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-    }
     .hero_center{
         gap: 20px;
     }
