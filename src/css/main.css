@@ -1624,37 +1624,41 @@ Ceative section
 
     .swiper-slide {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         border-radius: 18px;
         font-size: 22px;
         font-weight: bold;
         color: #fff;
     }
-
+    .swiper-slide > h2{
+        padding: 10px;
+        font-size: 2.5rem;
+    }
+    
     .swiper-slide:nth-child(1n) {
-        background-image: url("/src/assets/images/img1.jpg");
+        background-image: url("/src/assets/images/model.png");
         background-size: cover;
         background-position: center;
         border: 2px solid black;
         filter: drop-shadow(0px 0px 20px var(------winish)) /*invert(75%)-*/;
     }
     .swiper-slide:nth-child(2n) {
-        background-image: url("/src/assets/images/img2.jpg");
+        background-image: url("/src/assets/images/design.jpg");
         background-size: cover;
         background-position: center;
         border: 2px solid black;
         filter: drop-shadow(0px 0px 20px var(------yellow)) /*invert(75%)-*/;
     }
     .swiper-slide:nth-child(3n) {
-        background-image: url("/src/assets/images/img3.jpg");
+        background-image: url("/src/assets/images/photo.jpg");
         background-size: cover;
         background-position: center;
         border: 2px solid black;
         filter: drop-shadow(0px 0px 20px var(------blue)) /*invert(75%)-*/;
     }
     .swiper-slide:nth-child(4n) {
-        background-image: url("/src/assets/images/img3.jpg");
+        background-image: url("/src/assets/images/sign-up-image.jpg");
         background-size: cover;
         background-position: center;
         border: 2px solid black;

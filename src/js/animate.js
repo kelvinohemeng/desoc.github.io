@@ -154,3 +154,11 @@ gsap.from(".hero-bounce-other2" , {
         scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       }
 });
+
+const alertBtns = document.querySelectorAll('.alert-btn')
+
+alertBtns.forEach( alertBtn => 
+    alertBtn.addEventListener('click', ()=> {
+        alert("Please come back later, the pages for these links are still being developed, Thank you.")
+    })
+)
