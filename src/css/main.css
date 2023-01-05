@@ -34,22 +34,18 @@ html{
 }
 
 body{
+    width: 100vw;
+    height: 100%;
     font-family: inter;
-    font-size: var(----small);
-    overflow-x: hidden;
+    overflow: hidden;
 }
+
 p{
     font-family: 'Inter' sans-serif !important;
     font-weight: 100;
     font-size: var(----small);
 }
 
-.deactivate-scroll{
-    inset: 0;
-    width: 100%;
-    position: fixed;
-
-}
 button{
     cursor: pointer;
 }
@@ -765,6 +761,7 @@ header Section
     }
     /* cta of nav */
     .cta_nav{
+        cursor: pointer;
         position: relative;
         border: solid 2px black;
         display: flex;
@@ -779,7 +776,7 @@ header Section
         background-color: #FFF004;
     }
     .cta_nav_inner > span {
-        font-family: var(----small);
+        font-size: var(----small);
         font-weight: 500;
     }
     .cta_nav_inner{

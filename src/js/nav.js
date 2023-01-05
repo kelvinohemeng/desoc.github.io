@@ -5,15 +5,40 @@ const navCloseIcon = document.getElementById("close_nav")
 const signUp = document.querySelector(".sign-up")
 const signUpInner = document.querySelector(".sign_container")
 
+
+// // disablling scroll
+// function disableScroll() {
+//     document.body.style.overflow = "hidden";
+// }
+// //enabling scroll
+// function enableScroll() {
+//     document.body.style.overflow = "auto";
+// }
+
+// ///toggle scrolling
+// let scrollingDisabled = false;
+
+// function toggleScroll() {
+//     console.log("i was clicked")
+//     if (scrollingDisabled) {
+//         enableScroll();
+//         scrollingDisabled = false;
+//     } else {
+//         disableScroll();
+//         scrollingDisabled = true;
+//     }
+// }
+
+
 document.querySelector(".cta_nav").addEventListener('click', (e)=>{
+    disableScroll()
     signUp.style.display = "flex"
     // document.body.classList.add('deactivate-scroll')
     e.stopPropagation()
-    // signUp.classList.add("open-signup")
 })
 document.querySelector(".b-signup").addEventListener('click', (e)=>{
+    enableScroll()
     signUp.style.display = "none"
-    // document.body.classList.remove('deactivate-scroll')
 })
 
 signUpInner.addEventListener('click', (e)=>{
@@ -23,18 +48,17 @@ signUpInner.addEventListener('click', (e)=>{
 })
 
 navOpen.addEventListener('click', ()=>{
-    // document.body.classList.add('deactivate-scroll')
     navCloseContainer.style.display = 'flex'
 })
 navCloseIcon.addEventListener('click', ()=>{
-    // document.body.classList.remove('deactivate-scroll')
     navCloseContainer.style.display = 'none'
 })
 
 for (let i = 0; i < navLinks.length; i++) {
     const navLink = navLinks[i];
     navLink.addEventListener('click', ()=>{
-        // document.body.classList.remove('deactivate-scroll')
         navCloseContainer.style.display = 'none'
     })
 }
+
+
