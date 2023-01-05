@@ -31,13 +31,11 @@ const signUpInner = document.querySelector(".sign_container")
 
 
 document.querySelector(".cta_nav").addEventListener('click', (e)=>{
-    disableScroll()
     signUp.style.display = "flex"
     // document.body.classList.add('deactivate-scroll')
     e.stopPropagation()
 })
 document.querySelector(".b-signup").addEventListener('click', (e)=>{
-    enableScroll()
     signUp.style.display = "none"
 })
 
