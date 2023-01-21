@@ -280,6 +280,7 @@ a{
         /* background-color: #018BD4; */
     }
     .sign_container{
+        margin: 15px;
         padding: 0 !important;
         max-width: 500px;
         height: 600px;
@@ -1634,7 +1635,7 @@ Ceative section
     }
     
     .swiper-slide:nth-child(1n) {
-        background-image: url("/src/assets/images/model.png");
+        background-image: url("/src/assets/images/model.jpg");
         background-size: cover;
         background-position: center;
         border: 2px solid black;
